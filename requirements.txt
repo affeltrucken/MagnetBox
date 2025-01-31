@@ -1,0 +1,4 @@
+py1337x
+qbittorrent-api
+colorama
+beautifulsoup4

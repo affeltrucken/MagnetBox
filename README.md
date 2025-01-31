@@ -26,6 +26,8 @@ The code is not great and it's not meant to be easily extendable. Just a quick h
 git clone https://github.com/affeltrucken/MagnetBox; cd MagnetBox
 ```
 
+___
+
 3. Install requirements:
 ```bash
 pip install -r requirements.txt
@@ -38,6 +40,8 @@ pip install -r requirements.txt
 * Web UI
 * [X] Web User Interface (Remote control)
 * Change Password (if needed)
+
+___
 
 5. Edit configuration in magnetbox.py:
 
@@ -59,6 +63,9 @@ MAGNET_FILE = "saved_magnets.txt"
 ALLOW_DUPLICATE_MAGNETS = False  # Set to True to add even if already saved
 ### END CONFIGURATION ###
 ```
+
+___
+
 4. Run script:
 ```bash
 python magnetbox.py

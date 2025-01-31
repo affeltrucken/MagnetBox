@@ -23,11 +23,11 @@ pip install -r requirements.txt
    
 4. Make sure you enable Web-UI in qBitTorrent to allow automatic downloads:
 * Open qBitTorrent
-* > Tools
-* > Options
-* > Web UI
+* Tools
+* Options
+* Web UI
 * [X] Web User Interface (Remote control)
-* > Change Password (if needed)
+* Change Password (if needed)
 
 5. Edit configuration in magnetbox.py:
 

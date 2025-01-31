@@ -66,3 +66,4 @@ python magnetbox.py
 
 Script should then get your watchlist, find the best torrent for each movie, and download them through qBitTorrent to the earlier specified save location.
 
+[script](script.png)

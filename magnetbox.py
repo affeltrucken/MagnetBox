@@ -77,7 +77,7 @@ def add_torrents_to_qbit(magnet_links: list, movie_titles: list) -> None:
             qbt_client.torrent_categories.createCategory(name=TORRENT_CATEGORY_NAME, save_path=TORRENT_SAVE_PATH)
 
         for link, movie in zip(magnet_links, movie_titles):
-            response = qbt_client.torrents_add(urls=link, category=TORRENT_CATEGORY_NAME)
+            response = qbt_client.torrents_add(urls=link, category=TORRENT_CATEGORY_NAME, save_path=TORRENT_SAVE_PATH)
             status_message = (
                 f"{Fore.CYAN}Added torrent for {movie}{Fore.RESET}" 
                 if response.lower() == "ok." 

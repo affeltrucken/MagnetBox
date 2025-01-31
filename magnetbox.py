@@ -96,6 +96,7 @@ def main() -> None:
     magnet_links, movie_titles, not_found_movies = [], [], []
     
     saved_magnets = load_saved_magnets()
+    total_torrent_size = 0.0
     
     for movie in watchlist:
         torrents = get_torrents.get_torrents(movie, MAX_TORRENT_SIZE_GB)
@@ -113,9 +114,12 @@ def main() -> None:
         if not ALLOW_DUPLICATE_MAGNETS and magnet_link in saved_magnets:
             print(f"{Fore.YELLOW}Skipping {movie} (already saved) in {MAGNET_FILE}.{Fore.RESET}")
             continue
+        total_torrent_size += float(first_torrent_info["size"].split()[0])
+
         
         magnet_links.append(magnet_link)
         movie_titles.append(movie)
+    print(total_torrent_size)
     
     print(f"Found {len(magnet_links)} torrents out of {len(watchlist)} movies.")
     

@@ -5,11 +5,21 @@ Thanks to sidward35 for the code to get the watchlist from Letterboxd.
 Taken from [this](https://github.com/sidward35/letterboxd-justwatch) project.
 
 # MagnetBox
-Automatically find and download torrents through a Letterboxd users watchlist using 1337x and qBittorrent.
+Automatically find and download torrents through a Letterboxd users watchlist using 1337x and qBittorrent, in Python.
 
 The code is not great and it's not meant to be easily extendable. Just a quick hacky codebase to make it more convenient for me to download stuff to my media server.
 
-## Install
+### Requirements
+* qBitTorrent
+* Python 3.13.1
+
+### Python Requirements
+* py1337x
+* qbittorrent-api
+* colorama
+* beautifulsoup4
+
+### Install
 
 1. Clone repository and enter folder:
 ```bash
@@ -49,7 +59,10 @@ MAGNET_FILE = "saved_magnets.txt"
 ALLOW_DUPLICATE_MAGNETS = False  # Set to True to add even if already saved
 ### END CONFIGURATION ###
 ```
-4. Run script
+4. Run script:
 ```bash
 python magnetbox.py
 ```
+
+Script should then get your watchlist, find the best torrent for each movie, and download them through qBitTorrent to the earlier specified save location.
+
